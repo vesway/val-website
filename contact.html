@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Val Esway</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+  <main class="max-w-3xl mx-auto p-6 space-y-12">
+    <section class="text-center space-y-4">
+      <h1 class="text-4xl font-bold">Let’s Work Together</h1>
+      <p class="text-lg text-gray-600">
+        Whether you’re looking to hire top talent, improve your HR systems, or elevate your career, I’d love to hear more about your goals and how I can support you.
+      </p>
+    </section>
+
+    <section>
+      <form name="contact" method="POST" data-netlify="true" class="space-y-4">
+        <input type="hidden" name="form-name" value="contact" />
+        <input type="text" name="name" placeholder="Full Name" class="border p-3 rounded w-full" required />
+        <input type="email" name="email" placeholder="Email Address" class="border p-3 rounded w-full" required />
+        <input type="text" name="company" placeholder="Company Name (if applicable)" class="border p-3 rounded w-full" />
+        <textarea name="message" placeholder="Tell me what you're looking for…" class="border p-3 rounded w-full h-32" required></textarea>
+        <button type="submit" class="bg-black text-white px-4 py-2 rounded hover:bg-gray-800">Submit Inquiry</button>
+      </form>
+    </section>
+
+    <section class="text-center text-sm text-gray-500 pt-6">
+      <p>You can also email me directly at <strong>val.esway@gmail.com</strong></p>
+      <p>Or connect on <a href="https://www.linkedin.com/in/valesway/" target="_blank" class="underline">LinkedIn</a></p>
+    </section>
+  </main>
+</body>
+</html>
