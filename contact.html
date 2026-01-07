@@ -11,7 +11,7 @@
     <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
       <div>
         <a href="index.html" class="text-xl font-bold text-orange-500">Work with Val</a>
-        <p class="text-sm text-gray-500 leading-tight">HR & Recruiting for Growing Teams</p>
+        <p class="text-sm text-gray-500 leading-tight">HR &amp; Recruiting for Growing Teams</p>
       </div>
       <nav class="space-x-4">
         <a href="index.html" class="text-gray-700 hover:text-orange-500">Home</a>
@@ -31,19 +31,34 @@
       </p>
     </section>
 
-    <form name="contact" method="POST" data-netlify="true" action="thank-you.html" class="space-y-4">
-  <input type="text" name="full-name" placeholder="Full Name" class="w-full border p-3 rounded" required>
-  <input type="email" name="email" placeholder="Email Address" class="w-full border p-3 rounded" required>
-  <input type="text" name="company" placeholder="Company Name (if applicable)" class="w-full border p-3 rounded">
-  <textarea name="message" rows="5" placeholder="Tell me what you're looking for..." class="w-full border p-3 rounded" required></textarea>
-  <button type="submit" class="bg-black text-white px-4 py-2 rounded">Submit Inquiry</button>
-</form>
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      action="thank-you.html"
+      class="space-y-4"
+    >
+      <!-- Honeypot field (spam protection) -->
+      <p class="hidden">
+        <label>Don’t fill this out: <input name="bot-field" /></label>
+      </p>
+
+      <input type="hidden" name="form-name" value="contact" />
+
+      <input type="text" name="full-name" placeholder="Full Name" class="w-full border p-3 rounded" required>
+      <input type="email" name="email" placeholder="Email Address" class="w-full border p-3 rounded" required>
+      <input type="text" name="company" placeholder="Company Name (if applicable)" class="w-full border p-3 rounded">
+      <textarea name="message" rows="5" placeholder="Tell me what you're looking for..." class="w-full border p-3 rounded" required></textarea>
+
+      <button type="submit" class="px-6 py-3 bg-orange-500 text-white rounded-xl hover:bg-orange-600">
+        Submit Inquiry
+      </button>
+    </form>
 
     <div class="text-center text-sm text-gray-600 pt-4">
       Or connect on <a href="https://www.linkedin.com/in/valesway/" class="text-blue-600 hover:underline" target="_blank">LinkedIn</a>
     </div>
   </main>
-  
 </body>
 </html>
-
